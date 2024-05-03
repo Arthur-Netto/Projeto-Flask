@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(0, 0, 0); 
+}
+
+/* Animação para desvanecer o texto */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        text-shadow: none; /* Nenhuma sombra inicialmente */
+    }
+    to {
+        opacity: 1;
+        text-shadow: 2px 2px 5px rgb(24, 1, 90); /* Aplicando sombra */
+    }
+}
+
+/* Animação para mover o texto para a esquerda */
+@keyframes moveLeft {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(calc(-50% - 350px), -50%);
+    }
+}
+
+/* Animação para desvanecer o quadrado e o texto2 */
+@keyframes fadeInSquare {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.texto1 {
+    text-align: center;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Aplica animações à classe texto1 */
+    animation: fadeInText 1.5s ease forwards, moveLeft 1s ease forwards 1s;
+}
+
+
+.texto2 {
+    width: 50px;
+    height: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Aplica animações à classe texto2 */
+    animation: fadeInSquare 1s ease forwards;
+    animation-delay: 1.5s;
+    top: 50%;
+    left: 60%;
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+} 
+
+
+.quadrado {
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Aplica animações à classe quadrado */
+    animation: fadeInSquare 1s ease forwards;
+    animation-delay: 1.5s;
+}
