@@ -1,10 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def homepage():
-    return render_template("homepage.html")
+    # Salvar do form no Banco de Dados caso for "POST" e retornar /login
+    return render_template("index.html")
 
 @app.route("/contatos")
 def contatos():

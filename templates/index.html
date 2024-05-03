@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>homepage</title>
+</head>
+<body>
+    <div class="container">
+        <div class="texto1"><h1>Minha Homepage</h1></div> 
+        <div class="quadrado">
+            <h1>Cadastro</h1>
+            <form method="post" action="{{ url_for('homepage')}}">
+                <input type="name" id="nome" placeholder="Cadastre seu nome"><br>
+                <input type="name" id="sobrenome" placeholder="Cadastre seu sobrenome"><br>
+                <input type="email" id="email" placeholder="Cadastre seu email"><br>
+                <input type="password" id="senha" placeholder="Cadastre sua senha"><br>
+                <button type="submit">Enviar</button>
+                <a href="/login">Já possui uma conta?</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
