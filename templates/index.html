@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
     <title>homepage</title>
 </head>
 <body>
+    <header>
+        <div class="menu-hamburger" onclick="toggleMenu()">&#9776;</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contatos">Contatos</a></li>
+                <li><a href="/login">Login</a></li>
+
+
+                <script>
+                    function toggleMenu(){
+                        var menu = document.querySelector('.menu');
+                        menu.classList.toggle('active');
+                    }
+                </script>
+            </ul>
+        </nav>
+    </header>
+
+   
+
     <div class="container">
         <div class="texto1"><h1>Minha Homepage</h1></div> 
         <div class="quadrado">

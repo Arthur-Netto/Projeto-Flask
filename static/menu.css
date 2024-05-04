@@ -1,0 +1,47 @@
+header {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInSquare 1.3s ease forwards;
+    cursor: pointer;
+}
+
+/* Estilo do cabeçalho */
+.menu-toggle {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Estilo do menu de navegação */
+.menu {
+    display: none;
+}
+
+.menu.active {
+    display: block;
+}
+
+/* Estilo da lista de itens do menu de navegação */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo dos itens da lista do menu de navegação */
+.menu ul li {
+    padding:5px 0;
+}
+
+/* Estilo dos links no menu de navegação */
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+/* Estilo dos links no menu de navegação ao passar o mouse sobre eles */
+.menu ul li a:hover {
+    text-decoration: underline;
+}
