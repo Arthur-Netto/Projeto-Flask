@@ -12,10 +12,10 @@
         <div class="quadrado">
             <h1>Cadastro</h1>
             <form method="post" action="{{ url_for('homepage')}}">
-                <input type="name" id="nome" placeholder="Cadastre seu nome"><br>
-                <input type="name" id="sobrenome" placeholder="Cadastre seu sobrenome"><br>
-                <input type="email" id="email" placeholder="Cadastre seu email"><br>
-                <input type="password" id="senha" placeholder="Cadastre sua senha"><br>
+                <input type="name" name="nome" id="nome" placeholder="Cadastre seu nome"><br>
+                <input type="name" name="sobrenome" id="sobrenome" placeholder="Cadastre seu sobrenome"><br>
+                <input type="email" name="email" id="email" placeholder="Cadastre seu email"><br>
+                <input type="password" name="senha" id="senha" placeholder="Cadastre sua senha"><br>
                 <button type="submit">Enviar</button>
                 <a href="/login">Já possui uma conta?</a>
             </form>
